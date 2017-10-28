@@ -4,7 +4,7 @@ import java.util.Scanner;
 import java.util.Random;
 
 /**
- * @author yasiro01
+ * @author rublan01
  */
 public class Ex1Driver {
   public static void main(String args[]) {
@@ -19,42 +19,89 @@ public class Ex1Driver {
     task3();
     task4();
     task5();
-    task6();
-    task7();
-    task8(numbers);
-    task9();
-    task10();
+//    task6();
+//    task7();
+//    task8(numbers);
+//    task9();
+//    task10();
   }
 
   /**
    * TODO: Task 1: Print "Hello World" to the default system output
    */
   public static void task1() {
-    throw new UnsupportedOperationException("Task 1 is not implemented yet.");
+      System.out.println("---Task 1---");
+      System.out.println("Hello World");
   }
   /**
    * TODO: Task 2: Print all numbers between 1 and 100 (inclusive) replacing all multiples of 3 with "foo", multiples of 5 with "bar", multiples of 3 and 5 with "huh"
    */
   public static void task2() {
-    throw new UnsupportedOperationException("Task 2 is not implemented yet.");
+    System.out.println("---Task 2---");
+    for (int i = 1; i<= 100; i++) {
+        if (i%3==0){
+            System.out.println("foo");
+        } else if (i%5==0) {
+            System.out.println("bar");
+        } else if (i%3==0 && i%5==0) {
+            System.out.print("huh");
+        } else {
+            System.out.println(i);
+        }
+    }
   }
   /**
    * TODO: Task 3: Calculate and print the sum of all multiples of 7 between 1 and 100 (inclusive)
    */
   public static void task3() {
-    throw new UnsupportedOperationException("Task 3 is not implemented yet.");
+      System.out.println("---Task 3---");
+      int total = 0;
+      for (int i=1; i<=100; i++) {
+          if (i%7==0) {
+              total += i;
+          }
+      }
+      System.out.println("The sum of all multiples of 7 between 1 and 100 is " +total);
+      
   }
   /**
    * TODO: Task 4: Calculate and print sum and product of all numbers between 1 and 20 (inclusive)
    */
   public static void task4() {
-    throw new UnsupportedOperationException("Task 4 is not implemented yet.");
-  }
+      System.out.println("---Task 4---");
+      int totalSum = 0;
+      for (int i=1; i <= 20; i++) {
+            totalSum += i;
+        } System.out.println("The sum of all numbers between 1 and 20 is " +totalSum);
+      int totalProd = 1;
+      for (int j=1; j <= 20; j++) {
+          totalProd *= j;
+        } System.out.println("The product of all numbers between 1 and 20 is " +totalProd);
+      }
+      
   /**
    * TODO: Task 5: Ask a user to enter their full name and print the initials (ie John Q Doe should yield JQD)
    */
   public static void task5() {
-    throw new UnsupportedOperationException("Task 5 is not implemented yet.");
+      System.out.println("---Task 5---");
+      String name = new String();
+      StringBuilder initials = new StringBuilder();
+      System.out.print("Enter your name: ");
+      Scanner input = new Scanner(System.in);
+      name  = input.nextLine();
+      boolean addNext = true;
+      if (name != null) {
+          for (int i=0; i < name.length(); i++) {
+              char c = name.charAt(i);
+              if (c == ' ') {
+                  addNext = true;
+              } else if (addNext) {
+                  initials.append(c);
+                  addNext = false;
+              }
+          }
+      System.out.println("Your initials are " +initials);
+      }
   }
   /**
    * TODO: Task 6: Create an array of 10 elements and initiate each element in it to the cube of its index (Do it in a loop, not during declaration)
