@@ -116,20 +116,29 @@ public class Ex1Driver {
       }
   }
   /**
-   * TODO: Task 7: Create an array of 100 random integers between 1 and 100, ask the user for an integer and tell if that number is in the array
+   * TODO: Task 7: Create an array of 100 random integers between 1 and 100, ask
+   * the user for an integer and tell if that number is in the array
    */
   public static void task7() {
-     System.out.println("---Task 7---");
-     Random rnd = new Random();
-     rnd.setSeed(252);
-     String searchInt;
-     int[] randArray = new int[100];
-     for (int i = 0; i < randArray.length; i++) {
-         randArray[i] = rnd.nextInt(100);
-     } System.out.println("Enter an integer");
-     Scanner input = new Scanner(System.in);
-     searchInt = input.nextLine();
-    
+      System.out.println();
+      System.out.println("---Task 7---");
+      Random rnd = new Random();
+      rnd.setSeed(252);
+      int searchInt;
+      int[] randArray = new int[100];
+      for (int i = 0; i < randArray.length; i++) {
+          randArray[i] = rnd.nextInt(100);
+      } System.out.println("Enter an integer: ");
+      Scanner input = new Scanner(System.in);
+      searchInt = input.nextInt();
+      String answer = "checking";
+      for (int i = 0; i < randArray.length; i++) {
+          if (i == searchInt) {
+              answer = "Number was found";
+          } else {
+              answer = "Number was not found";
+          }
+      } System.out.println(answer);
   }
   /**
    * TODO: Task 8: Take an array of integers as a parameter, calculate, print, and return the sum of its elements
