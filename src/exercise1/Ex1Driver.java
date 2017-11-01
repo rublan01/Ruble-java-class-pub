@@ -19,8 +19,8 @@ public class Ex1Driver {
     task3();
     task4();
     task5();
-//    task6();
-//    task7();
+    task6();
+    task7();
 //    task8(numbers);
 //    task9();
 //    task10();
@@ -107,15 +107,29 @@ public class Ex1Driver {
    * TODO: Task 6: Create an array of 10 elements and initiate each element in it to the cube of its index (Do it in a loop, not during declaration)
    */
   public static void task6() {
-    throw new UnsupportedOperationException("Task 6 is not implemented yet.");
+      System.out.println("---Task 6---");
+      int[] cubed;
+      cubed = new int[10];
+      for(int i = 0; i < cubed.length; i++) {
+          cubed[i] = (i * i * i);
+          System.out.print(cubed[i] +" ");
+      }
   }
   /**
    * TODO: Task 7: Create an array of 100 random integers between 1 and 100, ask the user for an integer and tell if that number is in the array
    */
   public static void task7() {
-    Random rnd = new Random();
-    rnd.setSeed(252);
-    throw new UnsupportedOperationException("Task 7 is not implemented yet.");
+     System.out.println("---Task 7---");
+     Random rnd = new Random();
+     rnd.setSeed(252);
+     String searchInt;
+     int[] randArray = new int[100];
+     for (int i = 0; i < randArray.length; i++) {
+         randArray[i] = rnd.nextInt(100);
+     } System.out.println("Enter an integer");
+     Scanner input = new Scanner(System.in);
+     searchInt = input.nextLine();
+    
   }
   /**
    * TODO: Task 8: Take an array of integers as a parameter, calculate, print, and return the sum of its elements
