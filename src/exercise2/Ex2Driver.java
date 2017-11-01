@@ -40,19 +40,23 @@ public class Ex2Driver {
    * @param n
    */
   public static void task1(int n) {
-      System.out.println(n);
-      int i;
-      int count = 0;
-      while (count!= n) {
-          for(i = 0; i < numberLst.length; i++) {
-          if (i < 0.5) {
-              count += 1;
+      Random num = new Random();
+      int headsCount = 0;
+      int flipcount = 0;
+      int flip;
+      while (headsCount < n) {
+          flip = num.nextInt(3);
+          if (flip%2==0) {
+              headsCount++;
+              flipcount++;
+              System.out.print("H");
           } else {
-              count = 0;
+              headsCount = 0;
+              flipcount++;
+              System.out.print("T");
           }
-      }
-    } System.out.println("Coin flips: " + count);
-          
+      } System.out.println();
+      System.out.println("Number of flips: " +flipcount);       
   }
   /**
    * TODO: Task 2: Define a function that takes an array of integers and a number as 
