@@ -116,6 +116,7 @@ public class Ex3Driver {
    * @return the resulting matrix
    */
   public static int[][] multiply(int[][] matrix1, int[][] matrix2) {
-    throw new UnsupportedOperationException();
+      int[][] prod;
+      prod = matrix1[][] * matrix2[][];
   }
 }
