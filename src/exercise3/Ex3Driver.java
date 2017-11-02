@@ -3,12 +3,13 @@ package exercise3;
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.PrintWriter;
+import java.io.FileWriter;
 import java.util.Scanner;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 /**
  *
- * @author yasiro01
+ * @author rublan01
  */
 public class Ex3Driver {
   public static final String PATH = "data/";
@@ -63,7 +64,13 @@ public class Ex3Driver {
    * @throws java.io.FileNotFoundException 
    */
   public static void writeMatrix(int[][] matrix, String filename) throws FileNotFoundException {
-    throw new UnsupportedOperationException();
+      PrintWriter writer;
+      writer = new PrintWriter(filename);
+      for (int x=0; x<matrix.length; x++) {
+          for (int y=0; y<matrix.length; y++) {
+              writer.print(matrix[x][y] + ' ');
+          } writer.println();
+    }
   }
   /**
    * Read a matrix from a file
