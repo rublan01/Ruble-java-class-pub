@@ -28,7 +28,7 @@ public class Ex2Driver {
     task5(numberArr);
     task6();
     task7();
-//    System.out.println(task8(numberLst, 75));
+    System.out.println(task8(numberLst, 75));
 //    task9();
 //    task10(task9());
   }
@@ -201,8 +201,18 @@ public class Ex2Driver {
    * @return 
    */
   public static int task8(ArrayList<Integer> arrLst, int threshold) {
-    throw new UnsupportedOperationException("Task 8 is not implemented yet.");
-  }
+      System.out.println("---Task 8---");
+      System.out.println(arrLst);
+      int count = 0;
+      for (int i : arrLst) {
+          if (i < threshold) {
+              count++;
+          }
+          else {
+              count = count;
+          }
+      } return count;      
+ }
   /**
    * TODO: Task 9: Generate a 2-dimensional array of size 10x10. 
    * Initialize values in the array to the values in the multiplication table 
