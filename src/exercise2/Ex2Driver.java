@@ -21,7 +21,7 @@ public class Ex2Driver {
       numberLst.add(rnd.nextInt(100));
     }
     task1(3);
-//    System.out.println(task2(numberArr, 90));
+    System.out.println(task2(numberArr, 90));
 //    System.out.println(task3(numberArr, 75));
 //    task4(numberArr);
 //    task5(numberArr);
@@ -40,6 +40,7 @@ public class Ex2Driver {
    * @param n
    */
   public static void task1(int n) {
+      System.out.println("---Task 1---");
       Random num = new Random();
       int headsCount = 0;
       int flipcount = 0;
@@ -67,10 +68,22 @@ public class Ex2Driver {
    * @return 
    */
   public static boolean task2(int[] arr, int n) {
-    throw new UnsupportedOperationException("Task 2 is not implemented yet.");
+      System.out.println("---Task 2---");
+      boolean ans = false;
+      for (int i = 0; i < arr.length; i++) {
+          if (arr[i] < n) {
+              ans = true;
+          }
+          else {
+              ans = false;
+          }
+      }
+      return ans;
   }
+  
   /**
-   * TODO: Task 3: Write a function that takes an array of integers and a threshold and prints how many values are below the threshold.
+   * TODO: Task 3: Write a function that takes an array of integers and a threshold 
+   * and prints how many values are below the threshold.
    * @param arr
    * @param threshold
    * @return 
@@ -79,14 +92,19 @@ public class Ex2Driver {
     throw new UnsupportedOperationException("Task 3 is not implemented yet.");
   }
   /**
-   * TODO: Task 4: Write a function that takes an array of integers as a parameter, finds the difference between 100 and the largest element of the array and adds this difference to every element in the array. (Note: after this function call the largest value in the array must be 100.)
+   * TODO: Task 4: Write a function that takes an array of integers as a parameter, 
+   * finds the difference between 100 and the largest element of the array and
+   * adds this difference to every element in the array. 
+   * (Note: after this function call the largest value in the array must be 100.)
    * @param arr
    */
   public static void task4(int[] arr) {
     throw new UnsupportedOperationException("Task 4 is not implemented yet.");
   }
   /**
-   * TODO: Task 5: Write a function that takes an array of integers as a parameter and, assuming the values are scores, prints number of students with 'A', 'B', 'C', 'D' and 'F'.
+   * TODO: Task 5: Write a function that takes an array of integers as a parameter
+   * and, assuming the values are scores, prints number of students with 'A', 'B',
+   *'C', 'D' and 'F'.
    * @param arr
    */
   public static void task5(int[] arr) {
