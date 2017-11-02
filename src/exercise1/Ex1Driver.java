@@ -22,8 +22,8 @@ public class Ex1Driver {
     task6();
     task7();
     task8(numbers);
-//    task9();
-//    task10();
+    task9();
+    task10();
   }
 
   /**
@@ -141,18 +141,26 @@ public class Ex1Driver {
       } System.out.println(answer);
   }
   /**
-   * TODO: Task 8: Take an array of integers as a parameter, calculate, print, and return the sum of its elements
+   * TODO: Task 8: Take an array of integers as a parameter, calculate, print,
+   * and return the sum of its elements
    * @param numbers
    * @return 
    */
   public static int task8(int[] numbers) {
-    throw new UnsupportedOperationException("Task 8 is not implemented yet.");
+      System.out.println("---Task 8---");
+      int sum = 0;
+      for (int i = 0; i < numbers.length; i++) {
+          sum = sum + numbers[i];
+      } System.out.println("Sum is " + sum);
+      return sum;      
   }
   /**
-   * TODO: Task 9: Ask a user to enter a word and write a function that tells if letters of a word are ordered (ie. "buy" would return true, while "bye" - false).
+   * TODO: Task 9: Ask a user to enter a word and write a function that tells if
+   * letters of a word are ordered (ie. "buy" would return true, while "bye" - false).
    * @return 
    */
   public static boolean task9() {
+      System.out.println("---Task 9---");
       String word = new String();
       System.out.println("Enter a word: ");
       Scanner input = new Scanner(System.in);
@@ -163,14 +171,16 @@ public class Ex1Driver {
               ascend = false;
           else
               ascend = true;
-      } while(i <= word.length());
+      } while (i <= word.length()); {
       i = 0;
-      return (ascend);
+      return ascend;
+  }
   }
   /**
    * TODO: Task 10: Implement sieve of Eratosthenes and print all prime numbers between 1 and 100
    */
   public static void task10() {
+      System.out.println("---Task 10---");
       int i = 0;
       int num = 0;
       String prime = "";
