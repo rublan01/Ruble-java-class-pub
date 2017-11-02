@@ -24,7 +24,7 @@ public class Ex2Driver {
     System.out.println(task2(numberArr, 90));
     System.out.println(task3(numberArr, 75));
     task4(numberArr);
-//    task5(numberArr);
+    task5(numberArr);
 //    task6();
 //    task7();
 //    System.out.println(task8(numberLst, 75));
@@ -134,7 +134,29 @@ public class Ex2Driver {
    * @param arr
    */
   public static void task5(int[] arr) {
-    throw new UnsupportedOperationException("Task 5 is not implemented yet.");
+      System.out.println("---Task 5---");
+      int countA = 0;
+      int countB = 0;
+      int countC = 0;
+      int countD = 0;
+      int countF = 0;
+      for (int i = 0; i < arr.length; i++) {
+          if (arr[i] < 59) {
+              countF++;
+          } else if (arr[i] < 69) {
+              countD++;
+          } else if (arr[i] < 79) {
+              countC++;
+          } else if (arr[i] < 90) {
+              countB++;
+          } else {
+              countA++;
+          }
+      } System.out.println("Number of As: " + countA);
+      System.out.println("Number of Bs: " + countB);
+      System.out.println("Number of Cs: " + countC);
+      System.out.println("Number of Ds: " + countD);
+      System.out.println("Number of Fs: " + countF);
   }
   /**
    * TODO: Task 6: Create an ArrayList of double values and ask a user to start entering numbers. Keep asking and adding numbers to the ArrayList until the user enters 0, then stop and print all the values in the ArrayList. Use function add() to add a number to an ArrayList.
