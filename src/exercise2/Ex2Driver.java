@@ -30,7 +30,7 @@ public class Ex2Driver {
     task7();
     System.out.println(task8(numberLst, 75));
     task9();
-//    task10(task9());
+    task10(task9());
   }
 
   /**
@@ -242,7 +242,20 @@ public class Ex2Driver {
    * @param matrix
    */
   public static void task10(int[][] matrix) {
-    throw new UnsupportedOperationException("Task 3 is not implemented yet.");
+      System.out.println("---Task 10---");
+      int [][] timesTable = new int[10][10];
+      int row = 1, column = 1;
+      for (int x = 0; x < timesTable.length; x++) {
+          for (int y = 0; y < timesTable.length; y++) {
+              timesTable[x][y] = row * column;
+              column++;
+          } row++;
+          column = 1;
+      } for (int x = 0; x < timesTable.length; x++) {
+          for (int y = 0; y < timesTable.length; y++) {
+              System.out.print(" " + timesTable[x][y] + "\t");
+          } System.out.println();
+      } System.out.println(timesTable);
   }
 
 }
