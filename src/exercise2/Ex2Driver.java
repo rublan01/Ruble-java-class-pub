@@ -27,7 +27,7 @@ public class Ex2Driver {
     task4(numberArr);
     task5(numberArr);
     task6();
-//    task7();
+    task7();
 //    System.out.println(task8(numberLst, 75));
 //    task9();
 //    task10(task9());
@@ -183,10 +183,19 @@ public class Ex2Driver {
    * each element of the ArrayList to a random number between 50 and 100.
    */
   public static void task7() {
-    throw new UnsupportedOperationException("Task 7 is not implemented yet.");
+      System.out.println("---Task 7---");
+      Random rnd = new Random();
+      rnd.setSeed(252);
+      ArrayList<Integer> numList = new ArrayList(10);
+      for (int i = 0; i < 10; i++) {
+          numList.add(rnd.nextInt(50) + 50);
+      } System.out.println(numList);
   }
   /**
-   * TODO: Task 8: Define a function that takes an ArrayList of integer values and a threshold as parameters and returns the number of values in the ArrayList below a threshold. You may use the ArrayList created at the previous step.
+   * TODO: Task 8: Define a function that takes an ArrayList of integer values 
+   * and a threshold as parameters and returns the number of values 
+   * in the ArrayList below a threshold. 
+   * You may use the ArrayList created at the previous step.
    * @param arrLst
    * @param threshold
    * @return 
@@ -195,7 +204,10 @@ public class Ex2Driver {
     throw new UnsupportedOperationException("Task 8 is not implemented yet.");
   }
   /**
-   * TODO: Task 9: Generate a 2-dimensional array of size 10x10. Initialize values in the array to the values in the multiplication table of size 10. (e.g. values in the intersections must start with 1 (1x1) and go all the way up to 100). Print the array and return it.
+   * TODO: Task 9: Generate a 2-dimensional array of size 10x10. 
+   * Initialize values in the array to the values in the multiplication table 
+   * of size 10. (e.g. values in the intersections must start with 1 (1x1) and 
+   * go all the way up to 100). Print the array and return it.
    * @return 
    */
   public static int[][] task9() {
