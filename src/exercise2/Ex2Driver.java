@@ -2,6 +2,7 @@ package exercise2;
 
 import java.util.ArrayList;
 import java.util.Random;
+import java.util.Scanner;
 
 /**
  *
@@ -25,7 +26,7 @@ public class Ex2Driver {
     System.out.println(task3(numberArr, 75));
     task4(numberArr);
     task5(numberArr);
-//    task6();
+    task6();
 //    task7();
 //    System.out.println(task8(numberLst, 75));
 //    task9();
@@ -159,14 +160,27 @@ public class Ex2Driver {
       System.out.println("Number of Fs: " + countF);
   }
   /**
-   * TODO: Task 6: Create an ArrayList of double values and ask a user to start entering numbers. Keep asking and adding numbers to the ArrayList until the user enters 0, then stop and print all the values in the ArrayList. Use function add() to add a number to an ArrayList.
+   * TODO: Task 6: Create an ArrayList of double values and ask a user to start 
+   * entering numbers. 
+   * Keep asking and adding numbers to the ArrayList until the user enters 0, 
+   * then stop and print all the values in the ArrayList. Use function add() 
+   * to add a number to an ArrayList.
    */
   public static void task6() {
-    ArrayList<Double> arr = new ArrayList();
-    throw new UnsupportedOperationException("Task 6 is not implemented yet.");
+      System.out.println("---Task 6---");
+      ArrayList<Double> arr = new ArrayList();
+      Scanner input = new Scanner(System.in);
+      System.out.println("Enter your number twice to start or 0 to quit: ");
+      double addnew = input.nextDouble();
+      while (addnew != 0) {
+          addnew = input.nextDouble();
+          arr.add(addnew);
+          System.out.println("Enter another number to add or 0 to quit: ");
+      } System.out.println(arr);
   }
   /**
-   * TODO: Task 7: Create an ArrayList of integer values of size 10 and initialize each element of the ArrayList to a random number between 50 and 100.
+   * TODO: Task 7: Create an ArrayList of integer values of size 10 and initialize 
+   * each element of the ArrayList to a random number between 50 and 100.
    */
   public static void task7() {
     throw new UnsupportedOperationException("Task 7 is not implemented yet.");
