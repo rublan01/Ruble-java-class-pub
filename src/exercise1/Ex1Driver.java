@@ -21,7 +21,7 @@ public class Ex1Driver {
     task5();
     task6();
     task7();
-//    task8(numbers);
+    task8(numbers);
 //    task9();
 //    task10();
   }
@@ -133,7 +133,7 @@ public class Ex1Driver {
       searchInt = input.nextInt();
       String answer = "checking";
       for (int i = 0; i < randArray.length; i++) {
-          if (i == searchInt) {
+          if (randArray[i] == searchInt) {
               answer = "Number was found";
           } else {
               answer = "Number was not found";
@@ -153,13 +153,37 @@ public class Ex1Driver {
    * @return 
    */
   public static boolean task9() {
-    throw new UnsupportedOperationException("Task 9 is not implemented yet.");
+      String word = new String();
+      System.out.println("Enter a word: ");
+      Scanner input = new Scanner(System.in);
+      int i = 0;
+      boolean ascend;
+      do {
+          if (word.charAt(i) <= word.charAt(i + 1))
+              ascend = false;
+          else
+              ascend = true;
+      } while(i <= word.length());
+      i = 0;
+      return (ascend);
   }
   /**
    * TODO: Task 10: Implement sieve of Eratosthenes and print all prime numbers between 1 and 100
    */
   public static void task10() {
-    throw new UnsupportedOperationException("Task 3 is not implemented yet.");
+      int i = 0;
+      int num = 0;
+      String prime = "";
+      for (i=1; i<=100; i++) {
+          int count = 0;
+          for (num=i; num >= 1; num--) {
+              if(i%num == 0) {
+                  count = count + 1;
+              } else if (count == 2) {
+                  prime = prime + i + ", ";
+              }
+          }
+      } System.out.println(prime);
   }
 
 }
