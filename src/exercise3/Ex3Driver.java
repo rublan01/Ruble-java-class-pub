@@ -79,8 +79,28 @@ public class Ex3Driver {
    * @throws java.io.FileNotFoundException
    */
   public static int[][] readFile(String filename) throws FileNotFoundException {
-    throw new UnsupportedOperationException();
-    /*
+      int[][] matrix;
+      File inFile = new File(filename);
+      Scanner in = new Scanner(inFile);
+      
+      int intLength = 0;
+      String[] length = in.nextLine().trim().split("//s+");
+      for (int i = 0; i < length.length; i++) {
+          intLength++;
+      } in.close();
+      
+      matrix = new int[intLength][intLength];
+      in = new Scanner(inFile);
+      
+      int lineCount = 0;
+      while (in.hasNextLine()) {
+          String[] currentLine = in.next().trim().split("//s+");
+          for (int i = 0; i < currentLine.length; i++) {
+              matrix[lineCount][i] = Integer.parseInt(currentLine[i]);
+          } lineCount++;
+          
+      } return matrix;
+      /*
     10. Open the input file and create a Scanner object to read its content
     20. Read two values (rows and columns) from the first line, if possible
     30. Create a new 2-D array
