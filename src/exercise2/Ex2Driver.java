@@ -22,7 +22,7 @@ public class Ex2Driver {
     }
     task1(3);
     System.out.println(task2(numberArr, 90));
-//    System.out.println(task3(numberArr, 75));
+    System.out.println(task3(numberArr, 75));
 //    task4(numberArr);
 //    task5(numberArr);
 //    task6();
@@ -89,7 +89,16 @@ public class Ex2Driver {
    * @return 
    */
   public static int task3(int[] arr, int threshold) {
-    throw new UnsupportedOperationException("Task 3 is not implemented yet.");
+      System.out.println("---Task 3---");
+      int count = 0;
+      for (int i = 0; i < arr.length; i++) {
+          if (arr[i] < threshold) {
+              count++;
+          }
+          else {
+              count = count;
+          }
+      } return count;
   }
   /**
    * TODO: Task 4: Write a function that takes an array of integers as a parameter, 
