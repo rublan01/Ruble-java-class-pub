@@ -116,7 +116,15 @@ public class Ex3Driver {
    * @return the resulting matrix
    */
   public static int[][] multiply(int[][] matrix1, int[][] matrix2) {
-      int[][] prod;
-      prod = matrix1[][] * matrix2[][];
+      int[][] matrix1a = matrix1;
+      int[][] matrix2a = matrix2;
+      int[][] prod = new int[r1][c2];
+      for (int i = 0; i < r1; i++) {
+          for (int j = 0; j < c2; j++) {
+              for (int k = 0; k < c1; k++) {
+                  prod[i][j] += matrix1a[i][k] * matrix2a[k][j];
+              }
+          }
+      }
   }
 }
