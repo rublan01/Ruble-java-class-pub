@@ -67,7 +67,7 @@ public Integer task3(Character);
     */
     public static int task3(Character c) {
         int num = 0;
-        num = c + 1;
+        num = c.charValue();
         return num;
     }
     /*
@@ -77,7 +77,7 @@ public Character task4(String);
     */
     public static char task4(String word) {
         char ch = ' ';
-        word.charAt(0);
+        ch = word.charAt(0);
         return ch;
     }
     /*
