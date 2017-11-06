@@ -195,12 +195,21 @@ public class Ex4DriverTest {
     @Test
     public void testTask9() {
         System.out.println("task9");
-        ArrayList<String> strlist = null;
-        int expResult = 0;
-        int result = Ex4Driver.task9(strlist);
+        ArrayList<String> strLst = new ArrayList();
+        strLst.add("Item 1");
+        strLst.add("Item 2");
+        strLst.add("Item 3");
+        strLst.add("Item 4");
+        int expResult = 4;
+        int result = Ex4Driver.task9(strLst);
         assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        
+        ArrayList<String> strLst2 = new ArrayList();
+        strLst2.add("Item 1");
+        strLst2.add("Item 2");
+        int expResult2 = 2;
+        int result2 = Ex4Driver.task9(strLst2);
+        assertEquals(expResult2, result2);
     }
 
     /**
@@ -209,12 +218,23 @@ public class Ex4DriverTest {
     @Test
     public void testTask10() {
         System.out.println("task10");
-        HashMap map = null;
-        int expResult = 0;
-        int result = Ex4Driver.task10(map);
+        HashMap<Integer, String> hashMap = new HashMap<Integer, String>();
+        hashMap.put(0, "zero");
+        hashMap.put(1, "one");
+        hashMap.put(2, "two");
+        hashMap.put(3, "three");
+        hashMap.put(4, "four");
+        int expResult = 5;
+        int result = Ex4Driver.task10(hashMap);
         assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+
+        HashMap<Integer, String> hashMap2 = new HashMap<Integer, String>();
+        hashMap2.put(0, "zero");
+        hashMap2.put(1, "one");
+        hashMap2.put(2, "two");
+        int expResult2 = 3;
+        int result2 = Ex4Driver.task10(hashMap2);
+        assertEquals(expResult2, result2);
     }
     
 }
