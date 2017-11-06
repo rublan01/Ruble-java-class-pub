@@ -96,8 +96,7 @@ public Character task6(String, Integer);
     */
     public static char task6(String word, int num) {
         char ch = ' ';
-        num++;
-        ch = word.charAt(0);
+        ch = word.charAt(num);
         return ch;
     }
     /*

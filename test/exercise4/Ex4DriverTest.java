@@ -123,13 +123,16 @@ public class Ex4DriverTest {
     @Test
     public void testTask5() {
         System.out.println("task5");
-        int x = 0;
-        int y = 0;
-        int expResult = 0;
+        int x = 5;
+        int y = 4;
+        int expResult = 9;
         int result = Ex4Driver.task5(x, y);
         assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        x = 15;
+        y = 20;
+        expResult = 35;
+        result = Ex4Driver.task5(x, y);
+        assertEquals(expResult, result);
     }
 
     /**
@@ -138,13 +141,16 @@ public class Ex4DriverTest {
     @Test
     public void testTask6() {
         System.out.println("task6");
-        String word = "";
-        int num = 0;
-        char expResult = ' ';
+        String word = "cat";
+        int num = 1;
+        char expResult = 'a';
         char result = Ex4Driver.task6(word, num);
         assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        word = "sleep";
+        num = 4;
+        expResult = 'p';
+        result = Ex4Driver.task6(word, num);
+        assertEquals(expResult, result);
     }
 
     /**
