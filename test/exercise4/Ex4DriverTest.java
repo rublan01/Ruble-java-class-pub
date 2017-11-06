@@ -159,12 +159,15 @@ public class Ex4DriverTest {
     @Test
     public void testTask7() {
         System.out.println("task7");
-        int[] arr = null;
-        int expResult = 0;
+        int[] arr = {1, 4, 6, 7};
+        int expResult = 1;
         int result = Ex4Driver.task7(arr);
         assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        
+        int[] arr2 = {2, 3, 4, 6, 8};
+        expResult = 2;
+        result = Ex4Driver.task7(arr2);
+        assertEquals(expResult, result);
     }
 
     /**
@@ -173,13 +176,17 @@ public class Ex4DriverTest {
     @Test
     public void testTask8() {
         System.out.println("task8");
-        int[] arr = null;
-        int n = 0;
-        boolean expResult = false;
+        int[] arr = {1, 2, 3, 4};
+        int n = 4;
+        boolean expResult = true;
         boolean result = Ex4Driver.task8(arr, n);
         assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+
+        int[] arr2 = {1, 2, 3, 4, 5, 6, 7, 8};
+        n = 5;
+        boolean expResult2 = false;
+        boolean result2 = Ex4Driver.task8(arr2, n);
+        assertEquals(expResult2, result2);
     }
 
     /**
