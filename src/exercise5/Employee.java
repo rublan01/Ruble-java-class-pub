@@ -40,7 +40,15 @@ public class Employee {
     
     @Override
     public String toString() {
-        return String.format("%s %s has a salary of: $(%d) and is full time: (%b)", firstName, lastName, salary, fullTime);
+        if (fullTime == true) {
+            return String.format("%s %s has an annual salary of: $(%d)", 
+                firstName, lastName, salary);
+        }
+        else {
+            return String.format("%s %s has an hourly salary of: $(%d)", 
+                    firstName, lastName, salary);
+        }
+
     }
     
 }
