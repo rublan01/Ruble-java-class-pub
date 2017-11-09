@@ -25,6 +25,6 @@ public class Room {
     
     @Override
     public String toString() {
-        return String.format("%s (%d)", building, number);
+        return String.format("%s %d", building, number);
     }
 }

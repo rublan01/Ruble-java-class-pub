@@ -34,18 +34,18 @@ public class Employee {
         return salary;
     }
     
-    public boolean getFullTime() {
+    public boolean isFullTime() {
         return fullTime;
     }
     
     @Override
     public String toString() {
         if (fullTime == true) {
-            return String.format("%s %s has an annual salary of: $(%d)", 
+            return String.format("%s %s earns $%.2f annually", 
                 firstName, lastName, salary);
         }
         else {
-            return String.format("%s %s has an hourly salary of: $(%d)", 
+            return String.format("%s %s earns $%.2f hourly", 
                     firstName, lastName, salary);
         }
 

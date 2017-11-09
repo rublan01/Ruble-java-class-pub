@@ -31,6 +31,6 @@ public class Book {
     
     @Override
     public String toString() {
-        return String.format("%s by %s costs (%d)", title, author, price);
+        return String.format("%s by %s costs %.2f", title, author, price);
     }
 }

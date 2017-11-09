@@ -30,7 +30,7 @@ public class Company {
     
     @Override
     public String toString() {
-        return String.format("%s (%f)", name, stockPrice);
+        return String.format("%s trading at $%.2f", name, stockPrice);
     }
   
 }

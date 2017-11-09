@@ -1,5 +1,7 @@
 package exercise5;
 
+import java.util.Objects;
+
 /**
  * Class Song
  * Task 7: Create a class Song with the following private data members: 
@@ -32,8 +34,38 @@ public class Song {
   public String getArtist() {
       return artist;
   }
+
+    @Override
+    public int hashCode() {
+        int hash = 7;
+        hash = 71 * hash + Objects.hashCode(this.title);
+        hash = 71 * hash + Objects.hashCode(this.artist);
+        return hash;
+    }
+
+    @Override
+    public boolean equals(Object obj) {
+        if (this == obj) {
+            return true;
+        }
+        if (obj == null) {
+            return false;
+        }
+        if (getClass() != obj.getClass()) {
+            return false;
+        }
+        final Song other = (Song) obj;
+        if (!Objects.equals(this.title, other.title)) {
+            return false;
+        }
+        if (!Objects.equals(this.artist, other.artist)) {
+            return false;
+        }
+        return true;
+    }
   
-  @Override
-  public int hashCode() {
-      
-}
+  public String toString() {
+      return String.format("%s by %s", title, artist);
+  }
+  
+}  

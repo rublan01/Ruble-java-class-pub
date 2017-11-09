@@ -31,7 +31,7 @@ public class College {
   
   @Override
   public String toString() {
-      return String.format("%s (%d)", name, rank);
+      return String.format("%s is ranked #%d", name, rank);
   }
   
 }

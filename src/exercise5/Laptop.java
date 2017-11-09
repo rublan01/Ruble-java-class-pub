@@ -43,8 +43,8 @@ public class Laptop {
     
     @Override
     public String toString() {
-        return String.format("%s makes a laptop in the color %s for $(%d)",
-                manufacturer, color, price);
+        return String.format("%s laptop by %s costs $%.2f",
+                color, manufacturer, price);
     }
   
 }
