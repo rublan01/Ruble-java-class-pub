@@ -25,7 +25,7 @@ public class Company {
     
     public double setStockPrice(double newStockPrice) {
         stockPrice = newStockPrice;
-        return newStockPrice;
+        return stockPrice;
     }
     
     @Override
