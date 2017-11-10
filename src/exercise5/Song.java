@@ -35,12 +35,26 @@ public class Song {
       return artist;
   }
 
-    @Override
-    public int hashCode() {
-        int hash = 7;
-        hash = 71 * hash + Objects.hashCode(this.title);
-        hash = 71 * hash + Objects.hashCode(this.artist);
-        return hash;
+  @Override
+  public int hashCode() {
+      int hash = 0;
+      for (int i = 0; i < title.length(); i++) {
+          char character = title.charAt(i);
+          int val = (int) character;
+          hash = hash + (i * val);
+      }
+      
+      for (int i = 0; i < artist.length(); i++) {
+          char character = artist.charAt(i);
+          int val = (int) character;
+          hash = hash + (i * val);
+      }
+      return hash;
+      
+//        int hash = 7;
+//        hash = 71 * hash + Objects.hashCode(this.title);
+//        hash = 71 * hash + Objects.hashCode(this.artist);
+//        return hash;
     }
 
     @Override
