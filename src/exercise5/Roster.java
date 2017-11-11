@@ -25,6 +25,20 @@ public class Roster {
       studentList = new ArrayList();
       BufferedReader inputFile = new BufferedReader(new FileReader(filename));
       String line;
-      Pattern p = Pattern.compile("(\\d+)\\s+(\\w+(\\s")
+      Pattern p = Pattern.compile("(\\d+)\\s+(\\w+(\\s\\w+)*)\\s+(\\d+)\\s+(\\w+([\\-\\s]\\w+)*)\\s+(\\d+)");
+    while ((line = inputFile.readLine()) != null) {
+      Matcher m = p.matcher(line.trim());
+      if (m.matches()) {
+        studentList.add(new Student(
+                Integer.parseInt(m.group(1)),
+                m.group(2),
+                Integer.parseInt(m.group(4)),
+                m.group(5),
+                Integer.parseInt(m.group(7)))
+        );
+      }
+    }
+  }
+
   }
 }
