@@ -10,10 +10,12 @@ public class Frog {
     
     private final String name;
     private int age;
-
-    public Frog(String name, int age) {
+    private String color = "green";
+    
+    public Frog(String name, int age, String color) {
         this.name = name;
         this.age = age;
+        this.color = color;
     }
 
     public String getName() {
@@ -23,12 +25,17 @@ public class Frog {
     public int getAge() {
         return age;
     }
+    
+    public String getColor() {
+        return color;
+    }
 
     @Override
     public int hashCode() {
         int hash = 7;
-        hash = 71 * hash + Objects.hashCode(this.name);
-        hash = 71 * hash + this.age;
+        hash = 97 * hash + Objects.hashCode(this.name);
+        hash = 97 * hash + this.age;
+        hash = 97 * hash + Objects.hashCode(this.color);
         return hash;
     }
 
@@ -50,14 +57,14 @@ public class Frog {
         if (!Objects.equals(this.name, other.name)) {
             return false;
         }
+        if (!Objects.equals(this.color, other.color)) {
+            return false;
+        }
         return true;
     }
 
     @Override
     public String toString() {
-        return "Frog{" + "name=" + name + ", age=" + age + '}';
+        return "Frog{" + "name=" + name + ", age=" + age + ", color=" + color + '}';
     }
-    
-    
-    
 }
