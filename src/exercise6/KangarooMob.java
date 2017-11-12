@@ -13,10 +13,10 @@ import java.util.HashSet;
  * @author rublan01
  */
 public class KangarooMob { 
-    private final ArrayList<Kangaroo> kangs;
+    private final HashSet<Kangaroo> kangs;
 
     public KangarooMob(String filename) throws FileNotFoundException, IOException {
-        kangs = new ArrayList();
+        HashSet<Kangaroo> kangs = new HashSet();
         BufferedReader inputFile = new BufferedReader(new FileReader(filename));
         String line;
         while ((line = inputFile.readLine()) != null) {

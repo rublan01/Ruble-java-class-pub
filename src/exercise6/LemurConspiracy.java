@@ -14,10 +14,10 @@ import java.util.HashSet;
  */
 public class LemurConspiracy {
     
- private final ArrayList<Lemur> lemurs;
+ private final HashSet<Lemur> lemurs;
 
     public LemurConspiracy(String filename) throws FileNotFoundException, IOException {
-        lemurs = new ArrayList();
+        HashSet<Lemur> lemurs = new HashSet();
         BufferedReader inputFile = new BufferedReader(new FileReader(filename));
         String line;
         while ((line = inputFile.readLine()) != null) {

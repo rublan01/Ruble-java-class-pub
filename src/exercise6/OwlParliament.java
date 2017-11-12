@@ -13,10 +13,10 @@ import java.util.HashSet;
  * @author rublan01
  */
 public class OwlParliament {
-    private final ArrayList<Owl> owls;
+    private final HashSet<Owl> owls;
 
     public OwlParliament(String filename) throws FileNotFoundException, IOException {
-        owls = new ArrayList();
+        HashSet<Owl> owls = new HashSet();
         BufferedReader inputFile = new BufferedReader(new FileReader(filename));
         String line;
         while ((line = inputFile.readLine()) != null) {
