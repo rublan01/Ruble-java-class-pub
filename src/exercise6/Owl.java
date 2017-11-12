@@ -11,6 +11,12 @@ public class Owl {
     private final String name;
     private int age;
     private String wisdom = "medium";
+    
+    public Owl() {
+        this.name = "Henry";
+        this.age = 0;
+        this.wisdom = "medium";
+    }     
 
     public Owl(String name, int age, String wisdom) {
         this.name = name;

@@ -10,7 +10,13 @@ public class Lemur {
         
     private final String name;
     private int age;
-    private int tailLength = 20;
+    private int tailLength;
+    
+    public Lemur() {
+        this.name = "Zubumafoo";
+        this.age = 0;
+        this.tailLength = 20;
+    }     
 
     public Lemur(String name, int age, int tailLength) {
         this.name = name;
