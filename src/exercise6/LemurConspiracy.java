@@ -22,12 +22,14 @@ public class LemurConspiracy {
         String line;
         while ((line = inputFile.readLine()) != null) {
             Scanner lineContent = new Scanner(line);
-            if (lineContent.hasNext()) {
-                lemurs.add(new Lemur());
+            for (Lemur lemur: lemurs) {
+                if (lineContent.hasNext()) {
+                lemurs.add(lemur);
             }
         }
     }
-    
+    }
+  
     public int size() {
         return lemurs.size();
     }
