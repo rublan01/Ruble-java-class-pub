@@ -12,6 +12,12 @@ public class Frog {
     private int age;
     private String color = "green";
     
+    public Frog() {
+        this.name = "Ted";
+        this.age = 0;
+        this.color = "green";
+    }    
+    
     public Frog(String name, int age, String color) {
         this.name = name;
         this.age = age;
