@@ -10,10 +10,12 @@ public class Lemur {
         
     private final String name;
     private int age;
+    private int tailLength = 20;
 
-    public Lemur(String name, int age) {
+    public Lemur(String name, int age, int tailLength) {
         this.name = name;
         this.age = age;
+        this.tailLength = tailLength;
     }
 
     public String getName() {
@@ -24,11 +26,16 @@ public class Lemur {
         return age;
     }
 
+    public int getTailLength() {
+        return tailLength;
+    }
+
     @Override
     public int hashCode() {
         int hash = 7;
-        hash = 79 * hash + Objects.hashCode(this.name);
-        hash = 79 * hash + this.age;
+        hash = 83 * hash + Objects.hashCode(this.name);
+        hash = 83 * hash + this.age;
+        hash = 83 * hash + this.tailLength;
         return hash;
     }
 
@@ -47,6 +54,9 @@ public class Lemur {
         if (this.age != other.age) {
             return false;
         }
+        if (this.tailLength != other.tailLength) {
+            return false;
+        }
         if (!Objects.equals(this.name, other.name)) {
             return false;
         }
@@ -55,8 +65,7 @@ public class Lemur {
 
     @Override
     public String toString() {
-        return "Lemur{" + "name=" + name + ", age=" + age + '}';
+        return "Lemur{" + "name=" + name + ", age=" + age + ", tailLength=" + tailLength + '}';
     }
-    
     
 }
