@@ -30,6 +30,10 @@ public class HourlyEmployee extends Employee {
         this.hours = hours;
     }
     
+    public double getNetPay() {
+        return netPay;
+    }
+    
     public void printWeeklyCheck() {
         double weekSalary = 0;
         weekSalary = (hours * wageRate) / 52;

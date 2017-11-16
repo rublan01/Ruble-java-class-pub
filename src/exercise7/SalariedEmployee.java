@@ -20,9 +20,13 @@ public class SalariedEmployee extends Employee {
         this.salary = salary;
     }
     
+    public double getNetPay() {
+        return netPay;
+    }    
+    
     public void printWeeklyCheck() {
         double weekSalary = 0;
-        weekSalary = salary / 52;
+        weekSalary = netPay / 52;
     }    
     
 }

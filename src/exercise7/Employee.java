@@ -30,14 +30,12 @@ public class Employee {
         this.ssn = ssn;
     }
 
-    public double getNetPay() {
+    protected double getNetPay() {
         return netPay;
     }
-
-    public void setNetPay(double netPay) {
-        this.netPay = netPay;
+    
+    protected void printWeeklyCheck() {
+        System.out.printf("%s (%s) makes $%.2f", name, ssn, (netPay / 52));
     }
-    
-    
     
 }
