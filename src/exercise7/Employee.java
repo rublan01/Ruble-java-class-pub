@@ -35,7 +35,7 @@ public class Employee {
     }
     
     protected void printWeeklyCheck() {
-        System.out.printf("%s (%s) makes $%.2f", name, ssn, (netPay / 52));
+        System.out.printf("%s (%s) makes $%.2f", name, ssn, netPay);
     }
     
 }

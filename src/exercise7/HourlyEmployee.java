@@ -35,8 +35,9 @@ public class HourlyEmployee extends Employee {
     }
     
     public void printWeeklyCheck() {
-        double weekSalary = 0;
-        weekSalary = (hours * wageRate) / 52;
+        double sal = 0;
+        sal = (wageRate * hours);
+        System.out.printf("%s makes $%.2f", name, sal);
     }
     
 }

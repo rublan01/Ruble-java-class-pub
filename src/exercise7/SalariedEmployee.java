@@ -27,6 +27,8 @@ public class SalariedEmployee extends Employee {
     public void printWeeklyCheck() {
         double weekSalary = 0;
         weekSalary = netPay / 52;
+        System.out.printf("%s makes $%.2f", name, weekSalary);
+
     }    
     
 }
