@@ -61,7 +61,7 @@ public abstract class Item {
   @Override
   public String toString() {
       if (quantity > 1) {
-          return ("We have" + quantity +  "copies of " + title);
+          return ("We have " + quantity +  " copies of " + title);
       }
       else if (quantity == 1) {
           return ("We have a copy of " + title);

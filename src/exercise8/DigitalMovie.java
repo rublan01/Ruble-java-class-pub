@@ -26,7 +26,7 @@ public class DigitalMovie extends Movie {
     }
     
     public String getInfo() {
-        return (title + "(" + releaseYear + ") by " + director + "is avaliable via " + service);
+        return (title + " (" + releaseYear + ") by " + director + " is avaliable via " + service);
     }
   
   /**

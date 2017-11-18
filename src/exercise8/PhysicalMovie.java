@@ -48,7 +48,7 @@ public class PhysicalMovie extends Movie {
   }
   
     public String getInfo() {
-        return (title + "(" + releaseYear + ") by " + director + "is located at" + location);
+        return (title + " (" + releaseYear + ") by " + director + " is located at " + location);
     }  
 
 }
