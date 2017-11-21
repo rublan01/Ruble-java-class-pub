@@ -2,30 +2,38 @@ package exercise9;
 
 /**
  * Class Ex9Converter
- * @author yasiro01
+ * @author rublan01
  */
 public class Ex9Converter {
+    
+    
   public Double c2f(Double valueFrom) {
-    throw new UnsupportedOperationException();
+      double f = (valueFrom * 9/5) + 32;
+      return f;
   }
 
   public Double c2k(Double valueFrom) {
-    throw new UnsupportedOperationException();
+      double k = (valueFrom + 273.15);
+      return k;
   }
 
   public Double f2c(Double valueFrom) {
-    throw new UnsupportedOperationException();
+      double c = (valueFrom - 32) * 5/9;
+      return c;
   }
 
   public Double f2k(Double valueFrom) {
-    throw new UnsupportedOperationException();
+      double k = ((valueFrom - 32) * 5/9 + 273.15);
+      return k;
   }
 
   public Double k2c(Double valueFrom) {
-    throw new UnsupportedOperationException();
+      double c = (valueFrom - 273.15);
+      return c;
   }
 
   public Double k2f(Double valueFrom) {
-    throw new UnsupportedOperationException();
+      double f = ((valueFrom - 273.15) * 9/5 + 32);
+      return f;
   }
 }
