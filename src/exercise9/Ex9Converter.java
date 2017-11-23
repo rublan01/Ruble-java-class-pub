@@ -8,32 +8,32 @@ public class Ex9Converter {
     
     
   public Double c2f(Double valueFrom) {
-      double f = (valueFrom * 9/5) + 32;
-      return f;
+      double temp = (valueFrom * 9/5) + 32;
+      return temp;
   }
 
   public Double c2k(Double valueFrom) {
-      double k = (valueFrom + 273.15);
-      return k;
+      double temp = (valueFrom + 273.15);
+      return temp;
   }
 
   public Double f2c(Double valueFrom) {
-      double c = (valueFrom - 32) * 5/9;
-      return c;
+      double temp = (valueFrom - 32) * 5/9;
+      return temp;
   }
 
   public Double f2k(Double valueFrom) {
-      double k = ((valueFrom - 32) * 5/9 + 273.15);
-      return k;
+      double temp = ((valueFrom - 32) * 5/9 + 273.15);
+      return temp;
   }
 
   public Double k2c(Double valueFrom) {
-      double c = (valueFrom - 273.15);
-      return c;
+      double temp = (valueFrom - 273.15);
+      return temp;
   }
 
   public Double k2f(Double valueFrom) {
-      double f = ((valueFrom - 273.15) * 9/5 + 32);
-      return f;
+      double temp = ((valueFrom - 273.15) * 9/5 + 32);
+      return temp;
   }
 }
