@@ -27,16 +27,18 @@ public class Ex9DriverGUI extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        firstNum = new javax.swing.JTextField();
-        convertButton = new javax.swing.JButton();
-        firstUnit = new javax.swing.JComboBox<>();
         instructionLabel = new javax.swing.JLabel();
-        jComboBox2 = new javax.swing.JComboBox<>();
-        jLabel2 = new javax.swing.JLabel();
+        firstNum = new javax.swing.JTextField();
+        firstUnit = new javax.swing.JComboBox<>();
+        convertButton = new javax.swing.JButton();
+        secondUnit = new javax.swing.JComboBox<>();
         tempLabel = new javax.swing.JLabel();
+        tmpOutput = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Ex9 Converter");
+
+        instructionLabel.setText("Enter a temperaure and unit:");
 
         firstNum.addInputMethodListener(new java.awt.event.InputMethodListener() {
             public void inputMethodTextChanged(java.awt.event.InputMethodEvent evt) {
@@ -51,13 +53,6 @@ public class Ex9DriverGUI extends javax.swing.JFrame {
             }
         });
 
-        convertButton.setText("Convert to: ");
-        convertButton.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                convertButtonActionPerformed(evt);
-            }
-        });
-
         firstUnit.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Fahrenheit", "Celsius", "Kelvin" }));
         firstUnit.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -65,11 +60,18 @@ public class Ex9DriverGUI extends javax.swing.JFrame {
             }
         });
 
-        instructionLabel.setText("Enter a temperaure and unit:");
+        convertButton.setText("Convert to: ");
+        convertButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                convertButtonActionPerformed(evt);
+            }
+        });
 
-        jComboBox2.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Fahrenheit", "Celsius", "Kelvin" }));
+        secondUnit.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Fahrenheit", "Celsius", "Kelvin" }));
 
         tempLabel.setText("Converted temp: ");
+
+        tmpOutput.setText("--");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -79,19 +81,22 @@ public class Ex9DriverGUI extends javax.swing.JFrame {
                 .addGap(37, 37, 37)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
-                        .addComponent(jLabel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addGap(246, 246, 246))
-                    .addComponent(instructionLabel, javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(tempLabel, javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                             .addComponent(convertButton, javax.swing.GroupLayout.DEFAULT_SIZE, 106, Short.MAX_VALUE)
                             .addComponent(firstNum))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(firstUnit, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jComboBox2, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                .addGap(98, 98, 98))
+                            .addComponent(secondUnit, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(instructionLabel, javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
+                                .addComponent(tempLabel)
+                                .addGap(32, 32, 32)
+                                .addComponent(tmpOutput)))
+                        .addGap(0, 0, Short.MAX_VALUE)))
+                .addGap(29, 29, 29))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -105,24 +110,66 @@ public class Ex9DriverGUI extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(convertButton)
-                    .addComponent(jComboBox2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(15, 15, 15)
-                .addComponent(jLabel2)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(tempLabel)
-                .addContainerGap(92, Short.MAX_VALUE))
+                    .addComponent(secondUnit, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(21, 21, 21)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(tempLabel)
+                    .addComponent(tmpOutput))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
-
+    
+    private void initComponents() {
+        convertButton = new javax.swing.JButton();
+        firstNum = new javax.swing.JTextField();
+        firstUnit = new javax.swing.JComboBox<>();
+        instructionLabel = new javax.swing.JLabel();
+        secondUnit = new javax.swing.JComboBox<>();
+        tempLabel = new javax.swing.JLabel();
+        tmpOutput = new javax.swing.JLabel();
+    }
+            
     private void firstNumActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_firstNumActionPerformed
-        // TODO add your handling code here:
+        // TODO add your handling code here
     }//GEN-LAST:event_firstNumActionPerformed
 
     private void convertButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_convertButtonActionPerformed
         // TODO add your handling code here:
-        Ex9Converter convertTemp = new Ex9Converter();
+        Ex9Converter converter = new Ex9Converter();
+        double firstNum = Double.parseDouble(firstNum.getText());
+        double tmpOut = 0.00;
+        
+        if ("Fahrenheit".equals(firstUnit)) && ("Celsius".equals(secondUnit)) {
+            tmpOut.setText(Double.toString(converter.f2c(firstNum)));
+        }
+        if ("Fahrenheit".equals(firstUnit)) && ("Kelvin".equals(secondUnit)) {
+            tmpOut.setText(Double.toString(converter.f2k(firstNum)));
+        }        
+        if ("Fahrenheit".equals(firstUnit)) && ("Fahrenheit".equals(secondUnit)) {
+            tmpOut.setText(firstNum);
+        }        
+        
+        if ("Celsius".equals(firstUnit)) && ("Fahrenheit".equals(secondUnit)) {
+            tmpOut.setText(Double.toString(converter.c2f(firstNum)));
+        }
+        if ("Celsius".equals(firstUnit)) && ("Kelvin".equals(secondUnit)) {
+            tmpOut.setText(Double.toString(converter.c2k(firstNum)));
+        }        
+        if ("Celsius".equals(firstUnit)) && ("Celsius".equals(secondUnit)) {
+            tmpOut.setText(firstNum);
+        }
+        
+        if ("Kelvin".equals(firstUnit)) && ("Fahrenheit".equals(secondUnit)) {
+            tmpOut.setText(Double.toString(converter.k2f(firstNum)));
+        }
+        if ("Kelvin".equals(firstUnit)) && ("Celsius".equals(secondUnit)) {
+            tmpOut.setText(Double.toString(converter.k2c(firstNum)));
+        }        
+        if ("Kelvin".equals(firstUnit)) && ("Kelvin".equals(secondUnit)) {
+            tmpOut.setText(firstNum);
+        }        
         
     }//GEN-LAST:event_convertButtonActionPerformed
 
@@ -180,8 +227,11 @@ public class Ex9DriverGUI extends javax.swing.JFrame {
     private javax.swing.JTextField firstNum;
     private javax.swing.JComboBox<String> firstUnit;
     private javax.swing.JLabel instructionLabel;
-    private javax.swing.JComboBox<String> jComboBox2;
-    private javax.swing.JLabel jLabel2;
+    private javax.swing.JComboBox<String> secondUnit;
     private javax.swing.JLabel tempLabel;
+    private javax.swing.JLabel tmpOutput;
     // End of variables declaration//GEN-END:variables
 }
+
+//        Ex9Converter convertTemp = new Ex9Converter();
+//        tmpOutput.setText(" ");
