@@ -120,7 +120,7 @@ public class Ex9DriverGUI extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
-    
+
     private void initComponents() {
         convertButton = new javax.swing.JButton();
         firstNum = new javax.swing.JTextField();
@@ -130,7 +130,7 @@ public class Ex9DriverGUI extends javax.swing.JFrame {
         tempLabel = new javax.swing.JLabel();
         tmpOutput = new javax.swing.JLabel();
     }
-            
+    
     private void firstNumActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_firstNumActionPerformed
         // TODO add your handling code here
     }//GEN-LAST:event_firstNumActionPerformed
