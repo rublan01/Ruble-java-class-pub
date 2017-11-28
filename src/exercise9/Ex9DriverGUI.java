@@ -121,15 +121,6 @@ public class Ex9DriverGUI extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void initComponents() {
-        convertButton = new javax.swing.JButton();
-        firstNum = new javax.swing.JTextField();
-        firstUnit = new javax.swing.JComboBox<>();
-        instructionLabel = new javax.swing.JLabel();
-        secondUnit = new javax.swing.JComboBox<>();
-        tempLabel = new javax.swing.JLabel();
-        tmpOutput = new javax.swing.JLabel();
-    }
     
     private void firstNumActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_firstNumActionPerformed
         // TODO add your handling code here
@@ -138,10 +129,10 @@ public class Ex9DriverGUI extends javax.swing.JFrame {
     private void convertButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_convertButtonActionPerformed
         // TODO add your handling code here:
         Ex9Converter converter = new Ex9Converter();
-        double firstNum = Double.parseDouble(firstNum.getText());
+        double firstNumVal = Double.parseDouble(firstNum.getText());
         double tmpOut = 0.00;
         
-        if ("Fahrenheit".equals(firstUnit)) && ("Celsius".equals(secondUnit)) {
+        if ("Fahrenheit".equals(firstUnit.getSelectedItem().toString()) && "Celsius".equals(secondUnit)) {
             tmpOut.setText(Double.toString(converter.f2c(firstNum)));
         }
         if ("Fahrenheit".equals(firstUnit)) && ("Kelvin".equals(secondUnit)) {
