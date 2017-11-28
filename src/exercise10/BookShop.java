@@ -14,7 +14,7 @@ import java.util.regex.Pattern;
 
 /**
  * Class BookShop
- * @author yasiro01
+ * @author rublan01
  */
 public class BookShop {
 
