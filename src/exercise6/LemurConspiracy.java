@@ -17,7 +17,7 @@ public class LemurConspiracy {
  private final HashSet<Lemur> lemurs;
 
     public LemurConspiracy(String filename) throws FileNotFoundException, IOException {
-        HashSet<Lemur> lemurs = new HashSet();
+        lemurs = new HashSet();
         BufferedReader inputFile = new BufferedReader(new FileReader(filename));
         String line;
         while ((line = inputFile.readLine()) != null) {

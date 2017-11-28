@@ -17,6 +17,11 @@ public class Crow {
         this.iq = 100;
     }
 
+    public Crow(String name, int age) {
+        this.name = name;
+        this.age = age;
+        this.iq = 100;
+    }
     public Crow(String name, int age, int iq) {
         this.name = name;
         this.age = age;

@@ -16,7 +16,7 @@ public class OwlParliament {
     private final HashSet<Owl> owls;
 
     public OwlParliament(String filename) throws FileNotFoundException, IOException {
-        HashSet<Owl> owls = new HashSet();
+        owls = new HashSet();
         BufferedReader inputFile = new BufferedReader(new FileReader(filename));
         String line;
         while ((line = inputFile.readLine()) != null) {

@@ -7,6 +7,8 @@ import java.io.FileReader;
 import java.util.Scanner;
 import java.util.ArrayList;
 import java.util.HashSet;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 /**
  * Class CrowMurder
@@ -15,15 +17,24 @@ import java.util.HashSet;
 public class CrowMurder {
     private final ArrayList<Crow> crows;
 
-    public CrowMurder(String filename) throws FileNotFoundException, IOException {
+    public CrowMurder(String filename) {
         crows = new ArrayList();
-        BufferedReader inputFile = new BufferedReader(new FileReader(filename));
+        BufferedReader inputFile = null;
+        try {
+            inputFile = new BufferedReader(new FileReader(filename));
+        } catch (FileNotFoundException ex) {
+            Logger.getLogger(CrowMurder.class.getName()).log(Level.SEVERE, null, ex);
+        }
         String line;
-        while ((line = inputFile.readLine()) != null) {
-            Scanner lineContent = new Scanner(line);
-            if (lineContent.hasNext()) {
-                crows.add(new Crow());
+        try {
+            while ((line = inputFile.readLine()) != null) {
+                Scanner lineContent = new Scanner(line);
+                if (lineContent.hasNext()) {
+                    crows.add(new Crow());
+                }
             }
+        } catch (IOException ex) {
+            Logger.getLogger(CrowMurder.class.getName()).log(Level.SEVERE, null, ex);
         }
     }
     
@@ -31,13 +42,14 @@ public class CrowMurder {
         return crows.size();
     }
     
-    public HashSet<Crow> getChief(int maxAge) {
-        HashSet<Crow> oldest = new HashSet();
+    public Crow getChief() {
+        int maxAge = Integer.MIN_VALUE;
+        Crow chief = null;
         for (Crow crow: crows) {
             if (crow.getAge() >= maxAge) {
-                 oldest.add(crow);
+                 chief = crow;
             }
-        } return oldest;
+        } return chief;
     }
     
 }

@@ -16,7 +16,7 @@ public class KangarooMob {
     private final HashSet<Kangaroo> kangs;
 
     public KangarooMob(String filename) throws FileNotFoundException, IOException {
-        HashSet<Kangaroo> kangs = new HashSet();
+        kangs = new HashSet();
         BufferedReader inputFile = new BufferedReader(new FileReader(filename));
         String line;
         while ((line = inputFile.readLine()) != null) {
