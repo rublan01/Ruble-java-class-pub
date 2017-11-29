@@ -19,12 +19,14 @@ public class Book {
         this.price = price;
         this.year = year;
     }
-   /*
+   
     public Book(Book anotherBook) {
-        this();
-        anotherBook = (Book.Book(String title, String author, Double price, Integer year)anotherBook.Book.clone());
+        this.title = anotherBook.getTitle();
+        this.author = anotherBook.getAuthor();
+        this.price = anotherBook.getPrice();
+        this.year = anotherBook.getYear();
     }
-    */
+    
     public String getTitle() {
         return title;
     }

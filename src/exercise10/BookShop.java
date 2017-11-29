@@ -45,12 +45,16 @@ public class BookShop {
   }
   
   public void printCatalog() {
+    for (Book book: catalog) {
+      System.out.println(book);
+    }      
   }
   
   public void order(Comparator<Book> comp) {
   }
   
   public ArrayList<Book> getCatalog() {
+      return catalog;
   }
 
 }
