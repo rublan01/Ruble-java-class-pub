@@ -132,34 +132,34 @@ public class Ex9DriverGUI extends javax.swing.JFrame {
         double firstNumVal = Double.parseDouble(firstNum.getText());
         double tmpOut = 0.00;
         
-        if ("Fahrenheit".equals(firstUnit.getSelectedItem().toString()) && "Celsius".equals(secondUnit)) {
-            tmpOut.setText(Double.toString(converter.f2c(firstNum)));
+        if ("Fahrenheit".equals(firstUnit.getSelectedItem().toString()) && "Celsius".equals(secondUnit.getSelectedItem().toString())) {
+            tmpOutput.setText(Double.toString(converter.f2c(firstNumVal)));
         }
-        if ("Fahrenheit".equals(firstUnit)) && ("Kelvin".equals(secondUnit)) {
-            tmpOut.setText(Double.toString(converter.f2k(firstNum)));
+        if ("Fahrenheit".equals(firstUnit.getSelectedItem().toString()) && "Kelvin".equals(secondUnit.getSelectedItem().toString())) {
+            tmpOutput.setText(Double.toString(converter.f2k(firstNumVal)));
         }        
-        if ("Fahrenheit".equals(firstUnit)) && ("Fahrenheit".equals(secondUnit)) {
-            tmpOut.setText(firstNum);
+        if ("Fahrenheit".equals(firstUnit.getSelectedItem().toString()) && "Fahrenheit".equals(secondUnit.getSelectedItem().toString())) {
+            tmpOutput.setText(Double.toString(firstNumVal));
         }        
         
-        if ("Celsius".equals(firstUnit)) && ("Fahrenheit".equals(secondUnit)) {
-            tmpOut.setText(Double.toString(converter.c2f(firstNum)));
+        if ("Celsius".equals(firstUnit.getSelectedItem().toString()) && "Fahrenheit".equals(secondUnit.getSelectedItem().toString())) {
+            tmpOutput.setText(Double.toString(converter.c2f(firstNumVal)));
         }
-        if ("Celsius".equals(firstUnit)) && ("Kelvin".equals(secondUnit)) {
-            tmpOut.setText(Double.toString(converter.c2k(firstNum)));
+        if ("Celsius".equals(firstUnit.getSelectedItem().toString()) && "Kelvin".equals(secondUnit.getSelectedItem().toString())) {
+            tmpOutput.setText(Double.toString(converter.c2k(firstNumVal)));
         }        
-        if ("Celsius".equals(firstUnit)) && ("Celsius".equals(secondUnit)) {
-            tmpOut.setText(firstNum);
+        if ("Celsius".equals(firstUnit.getSelectedItem().toString()) && "Celsius".equals(secondUnit.getSelectedItem().toString())) {
+            tmpOutput.setText(Double.toString(firstNumVal));
         }
         
-        if ("Kelvin".equals(firstUnit)) && ("Fahrenheit".equals(secondUnit)) {
-            tmpOut.setText(Double.toString(converter.k2f(firstNum)));
+        if ("Kelvin".equals(firstUnit.getSelectedItem().toString()) && "Fahrenheit".equals(secondUnit.getSelectedItem().toString())) {
+            tmpOutput.setText(Double.toString(converter.k2f(firstNumVal)));
         }
-        if ("Kelvin".equals(firstUnit)) && ("Celsius".equals(secondUnit)) {
-            tmpOut.setText(Double.toString(converter.k2c(firstNum)));
+        if ("Kelvin".equals(firstUnit.getSelectedItem().toString()) && "Celsius".equals(secondUnit.getSelectedItem().toString())) {
+            tmpOutput.setText(Double.toString(converter.k2c(firstNumVal)));
         }        
-        if ("Kelvin".equals(firstUnit)) && ("Kelvin".equals(secondUnit)) {
-            tmpOut.setText(firstNum);
+        if ("Kelvin".equals(firstUnit.getSelectedItem().toString()) && "Kelvin".equals(secondUnit.getSelectedItem().toString())) {
+            tmpOutput.setText(Double.toString(firstNumVal));
         }        
         
     }//GEN-LAST:event_convertButtonActionPerformed
