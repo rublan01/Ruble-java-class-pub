@@ -17,20 +17,28 @@ import java.util.regex.Pattern;
  * @author rublan01
  */
 public class BookShop {
+    ArrayList<Book> catalog;
+
 
   public BookShop() {
+      catalog = new ArrayList();
   }
   
   public BookShop(String filename) throws FileNotFoundException {
+      new BookShop();
   }
   
   public BookShop(BookShop anotherBookShop) {
+    this();
+    catalog = (ArrayList<Book>)anotherBookShop.catalog.clone();      
   }
   
   public void addNewTitle(Book book) {
+      catalog.add(book);
   }
   
   public int size() {
+      return catalog.size();
   }
   
   public void discountAll(Double discountPercent) {
