@@ -24,8 +24,20 @@ public class BookShop {
       catalog = new ArrayList();
   }
   
-  public BookShop(String filename) throws FileNotFoundException {
-      new BookShop();
+  public BookShop(String filename) throws FileNotFoundException, IOException {
+    this();
+    BufferedReader inputFile = new BufferedReader(new FileReader(filename));
+    String line;
+    try {
+        while ((line = inputFile.readLine()) != null) {
+            String[] lineContent = line.split(",");
+            for (Book book: lineContent) {
+                catalog.add(book);
+            }
+         }
+    } catch (IOException e) {
+        System.out.println("IOException error");
+    }
   }
   
   public BookShop(BookShop anotherBookShop) {
@@ -42,6 +54,11 @@ public class BookShop {
   }
   
   public void discountAll(Double discountPercent) {
+      double saved;
+      for (Book book: catalog) {
+          saved = (discountPercent * book.price);
+          book.price = book.price - saved;
+      }
   }
   
   public void printCatalog() {
@@ -51,6 +68,7 @@ public class BookShop {
   }
   
   public void order(Comparator<Book> comp) {
+      Collections.sort(catalog, comp);
   }
   
   public ArrayList<Book> getCatalog() {
