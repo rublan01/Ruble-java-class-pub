@@ -83,27 +83,37 @@ public class Book {
 
     @Override
     public String toString() {
-        return title + ", " + author +", " + price + ", " + year;
+        return title + " (" + year + ") by " + author + " costs $" + price;
     }
     
 }
 
 class ByTitle implements Comparator<Book> {
+    @Override
     public int compare(Book o1, Book o2) {
-    return o1.title.compareTo(o2.title);
+        return o1.title.compareTo(o2.title);
+    }
 }
 
+
 class ByAuthor implements Comparator<Book> {
+    @Override
     public int compare(Book o1, Book o2) {
-    return o1.author.compareTo(o2.author);
+        return o1.author.compareTo(o2.author);
+    }
 }
     
 class ByPrice implements Comparator<Book> {
+    @Override
     public int compare(Book o1, Book o2) {
-    return o1.price.compareTo(o2.price);
+        return o1.price.compareTo(o2.price);
+    }
 }
     
 class ByYear implements Comparator<Book> {
+    @Override
     public int compare(Book o1, Book o2) {
-    return o1.year.compareTo(o2.year);
+        return o1.year.compareTo(o2.year);
+    }
 }
+
