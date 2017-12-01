@@ -4,7 +4,7 @@ import java.util.Collection;
 
 /**
  * Exercise 11 logic
- * @author yasiro01
+ * @author rublan01
  */
 public class Ex11Logic {
   
@@ -15,6 +15,11 @@ public class Ex11Logic {
    * @return length of the parameter's string representation
    */
   // TODO: Implement method strLen
+    
+   public <T> int strLen (T item) {
+       String strItem = item.toString();
+       return strItem.length();
+   }
   
   /**
    * Task 2
@@ -25,6 +30,16 @@ public class Ex11Logic {
    * @return the greater of three parameters
    */
   // TODO: Implement method greater
+   
+    public <T extends Comparable> String greater(T item1, T item2, T item3) {
+        if (item1.compareTo(item3) >= 0) {
+            return item1.toString();
+        } else if (item2.compareTo(item3) >= 0) {
+            return item2.toString();
+        } else {
+            return item3.toString();
+        } 
+    }   
   
   /**
    * Task 3
@@ -33,6 +48,12 @@ public class Ex11Logic {
    * print a list of items
    */
   // TODO: Implement method printList
+    
+    public <T> void printList(Collection<T> list) {
+        for (T item: list) {
+            System.out.println(item);
+        }
+    }    
   
   /**
    * Task 4
@@ -41,7 +62,27 @@ public class Ex11Logic {
    * @return the smallest item in the collection
    */
   // TODO: Implement method findMinItem
-}
+
+    public <T extends Comparable> Object findMinItem(Collection<T> list) {
+        for (T item: list) {
+            T smallest = null;
+
+            if (smallest == null) {
+                smallest = item;
+            } else if (item.compareTo(smallest) <= 0) {
+                smallest = item;
+            } else {
+                smallest = smallest;
+            }                
+            /*
+            } else if (item < smallest) {
+                smallest = item;
+            } else {
+                smallest = smallest;
+            }*/
+        }
+        return smallest;
+    }
 
   /**
    * Task 5
@@ -51,3 +92,5 @@ public class Ex11Logic {
    * Implement the constructor, getters, setters, and toString
    */
   // TODO: Implement class Foo
+    
+}
