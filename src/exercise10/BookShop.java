@@ -49,10 +49,10 @@ public class BookShop {
   }
   
   public void discountAll(Double discountPercent) {
-      double saved;
       for (Book book: catalog) {
-          saved = (discountPercent * book.price);
-          book.price = book.price - saved;
+          double price1 = book.getPrice();
+          double discounted = (price1 * ((100 - discountPercent) / 100));
+          book.setPrice(discounted);
       }
   }
   
