@@ -83,9 +83,9 @@ public class Ex9bDriverGUI extends javax.swing.JFrame {
                     .addComponent(firstLabel)
                     .addGroup(layout.createSequentialGroup()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(measureInput, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(secondLabel))
-                        .addGap(31, 31, 31)
+                            .addComponent(secondLabel)
+                            .addComponent(measureInput, javax.swing.GroupLayout.PREFERRED_SIZE, 138, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(18, 18, 18)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(secondUnit, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(firstUnit, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
@@ -118,6 +118,23 @@ public class Ex9bDriverGUI extends javax.swing.JFrame {
 
     private void convertButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_convertButtonActionPerformed
         // TODO add your handling code here:
+        Ex9BConverter converter = new Ex9BConverter();
+        double input = Double.parseDouble(measureInput.getText());
+        
+        if ("Grams".equals(firstUnit.getSelectedItem().toString()) && "Ounces".equals(secondUnit.getSelectedItem().toString())) {
+            convertedUnit.setText(Double.toString(converter.gram2oz(input)));
+        }
+        if ("Ounces".equals(firstUnit.getSelectedItem().toString()) && "Grams".equals(secondUnit.getSelectedItem().toString())) {
+            convertedUnit.setText(Double.toString(converter.oz2gram(input)));
+        }        
+        if ("Miles".equals(firstUnit.getSelectedItem().toString()) && "Kilometers".equals(secondUnit.getSelectedItem().toString())) {
+            convertedUnit.setText(Double.toString(converter.mile2kilo(input)));
+        }        
+        if ("Kilometers".equals(firstUnit.getSelectedItem().toString()) && "Miles".equals(secondUnit.getSelectedItem().toString())) {
+            convertedUnit.setText(Double.toString(converter.kilo2mile(input)));
+        }  
+        
+        
     }//GEN-LAST:event_convertButtonActionPerformed
 
     private void firstUnitActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_firstUnitActionPerformed
