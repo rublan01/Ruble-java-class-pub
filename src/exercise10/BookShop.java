@@ -25,19 +25,14 @@ public class BookShop {
   }
   
   public BookShop(String filename) throws FileNotFoundException, IOException {
-    this();
-    BufferedReader inputFile = new BufferedReader(new FileReader(filename));
-    String line;
-    try {
-        while ((line = inputFile.readLine()) != null) {
-            String[] lineContent = line.split(",");
-            for (Book book: lineContent) {
-                catalog.add(book);
-            }
-         }
-    } catch (IOException e) {
-        System.out.println("IOException error");
-    }
+      this();
+      BufferedReader inputFile = new BufferedReader(new FileReader(filename));
+      String line;
+      while ((line = inputFile.readLine()) != null) {
+        String[] lineContent = line.split(",");
+        Book info = new Book(lineContent[0], lineContent[1], Double.parseDouble(lineContent[2]), Integer.parseInt(lineContent[3]));
+        catalog.add(info);
+      }    
   }
   
   public BookShop(BookShop anotherBookShop) {
