@@ -1,6 +1,7 @@
 package exercise11;
 
 import java.util.Collection;
+import java.util.Collections;
 
 /**
  * Exercise 11 logic
@@ -31,14 +32,18 @@ public class Ex11Logic {
    */
   // TODO: Implement method greater
    
-    public <T extends Comparable> String greater(T item1, T item2, T item3) {
-        if (item1.compareTo(item3) >= 0) {
-            return item1.toString();
+    public <T extends Comparable>T greater(T item1, T item2, T item3) {
+        if (item1.compareTo(item2) >= 0) {
+            if (item1.compareTo(item3) >= 0) {
+                return item1;
+            } else {
+                return item3;
+            }
         } else if (item2.compareTo(item3) >= 0) {
-            return item2.toString();
+            return item2;
         } else {
-            return item3.toString();
-        } 
+            return item3;
+        }
     }   
   
   /**
@@ -49,9 +54,10 @@ public class Ex11Logic {
    */
   // TODO: Implement method printList
     
-    public <T> void printList(Collection<T> list) {
+    public <T> void printList(T...list) {
         for (T item: list) {
-            System.out.println(item);
+            //System.out.println(item);
+            System.out.print(item + " ");
         }
     }    
   
@@ -64,24 +70,9 @@ public class Ex11Logic {
   // TODO: Implement method findMinItem
 
     public <T extends Comparable> Object findMinItem(Collection<T> list) {
-        T smallest = null;
-        for (T item: list) {
-            if (smallest == null) {
-                smallest = item;
-            } else if (item.compareTo(smallest) <= 0) {
-                smallest = item;
-            } else {
-                smallest = smallest;
-            }                
-            /*
-            } else if (item < smallest) {
-                smallest = item;
-            } else {
-                smallest = smallest;
-            }*/
-        }
-        return smallest;
+        return Collections.min(list);
     }
+}
 
   /**
    * Task 5
@@ -92,7 +83,7 @@ public class Ex11Logic {
    */
   // TODO: Implement class Foo
     
-    public class Foo<T, U> {
+    class Foo<T, U> {
         private T fuzz;
         private U buzz;
 
@@ -124,4 +115,4 @@ public class Ex11Logic {
         
     }
     
-}
+
