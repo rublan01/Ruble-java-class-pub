@@ -64,9 +64,8 @@ public class Ex11Logic {
   // TODO: Implement method findMinItem
 
     public <T extends Comparable> Object findMinItem(Collection<T> list) {
+        T smallest = null;
         for (T item: list) {
-            T smallest = null;
-
             if (smallest == null) {
                 smallest = item;
             } else if (item.compareTo(smallest) <= 0) {
@@ -92,5 +91,37 @@ public class Ex11Logic {
    * Implement the constructor, getters, setters, and toString
    */
   // TODO: Implement class Foo
+    
+    public class Foo<T, U> {
+        private T fuzz;
+        private U buzz;
+
+        public Foo(T fuzz, U buzz) {
+            this.fuzz = fuzz;
+            this.buzz = buzz;
+        }
+
+        public T getFuzz() {
+            return fuzz;
+        }
+
+        public void setFuzz(T fuzz) {
+            this.fuzz = fuzz;
+        }
+
+        public U getBuzz() {
+            return buzz;
+        }
+
+        public void setBuzz(U buzz) {
+            this.buzz = buzz;
+        }
+
+        @Override
+        public String toString() {
+            return "Foo{" + "fuzz=" + fuzz + ", buzz=" + buzz + '}';
+        }
+        
+    }
     
 }
