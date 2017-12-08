@@ -73,7 +73,7 @@ public class Ex1Driver {
       for (int i=1; i <= 20; i++) {
             totalSum += i;
         } System.out.println("The sum of all numbers between 1 and 20 is " +totalSum);
-      int totalProd = 1;
+      long totalProd = 1;
       for (int j=1; j <= 20; j++) {
           totalProd *= j;
         } System.out.println("The product of all numbers between 1 and 20 is " +totalProd);
